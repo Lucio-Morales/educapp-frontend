@@ -1,3 +1,38 @@
+// interface FormInputProps {
+//   label: string;
+//   name: string;
+//   type?: string;
+//   value: string;
+//   onChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
+//   error?: string;
+// }
+
+// const FormInput: React.FC<FormInputProps> = ({
+//   label,
+//   name,
+//   type = 'text',
+//   value,
+//   onChange,
+//   error,
+// }) => (
+//   <div>
+//     <label htmlFor={name}>{label}</label>
+//     <input
+//       id={name}
+//       name={name}
+//       type={type}
+//       value={value}
+//       onChange={onChange}
+//     />
+//     {error && <p style={{ color: 'red' }}>{error}</p>}
+//   </div>
+// );
+
+// export default FormInput;
+
+// FormInput.tsx
+import styled from 'styled-components';
+
 interface FormInputProps {
   label: string;
   name: string;
@@ -7,6 +42,34 @@ interface FormInputProps {
   error?: string;
 }
 
+const InputContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+`;
+
+const InputLabel = styled.label`
+  font-size: 14px;
+  margin-bottom: 4px;
+`;
+
+const InputField = styled.input`
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  outline: none;
+
+  &:focus {
+    border-color: #888;
+  }
+`;
+
+const ErrorText = styled.p`
+  color: red;
+  font-size: 12px;
+  margin-top: 4px;
+`;
+
 const FormInput: React.FC<FormInputProps> = ({
   label,
   name,
@@ -15,21 +78,17 @@ const FormInput: React.FC<FormInputProps> = ({
   onChange,
   error,
 }) => (
-  <div>
-    <label htmlFor={name}>{label}</label>
-    <input
+  <InputContainer>
+    <InputLabel htmlFor={name}>{label}</InputLabel>
+    <InputField
       id={name}
       name={name}
       type={type}
       value={value}
       onChange={onChange}
-      // style={{
-      //   border: error ? '1px solid red' : '1px solid #ccc',
-      //   padding: '0.5rem',
-      // }}
     />
-    {error && <p style={{ color: 'red' }}>{error}</p>}
-  </div>
+    {error && <ErrorText>{error}</ErrorText>}
+  </InputContainer>
 );
 
 export default FormInput;

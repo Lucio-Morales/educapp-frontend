@@ -1,6 +1,7 @@
 import { FormState, useForm } from '../../hooks/useForm';
 import FormButton from './FormButton';
 import FormInput from './FormInput';
+import { FormContainer } from './Register';
 import { validateLogin } from './validation';
 
 interface LoginFormValues extends FormState {
@@ -17,7 +18,7 @@ const Login = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit(onSubmit)}>
+    <FormContainer onSubmit={handleSubmit(onSubmit)}>
       <FormInput
         label="Correo"
         name="email"
@@ -34,7 +35,7 @@ const Login = () => {
         error={formErrors.password}
       />
       <FormButton label="Iniciar sesión" />
-    </form>
+    </FormContainer>
   );
 };
 
