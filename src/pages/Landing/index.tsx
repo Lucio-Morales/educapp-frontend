@@ -3,19 +3,9 @@ import Register from '../../components/forms/Register';
 import Modal from '../../components/modal/Modal';
 import Login from '../../components/forms/Login';
 import Navbar from '../../components/navbar/NavBar';
-import styled from 'styled-components';
+import { ToggleText } from './styles/ToggleText';
+import Hero from './components/Hero';
 
-const ToggleText = styled.span`
-  margin-top: 16px;
-  color: #007bff;
-  cursor: pointer;
-  font-size: 14px;
-  text-align: center;
-
-  &:hover {
-    text-decoration: underline;
-  }
-`;
 const Landing = () => {
   const [activeModal, setActiveModal] = useState<'login' | 'register' | null>(
     null
@@ -33,7 +23,7 @@ const Landing = () => {
   return (
     <>
       <Navbar onLoginClick={openLogin} onRegisterClick={openRegister} />
-
+      <Hero />
       <Modal
         isOpen={activeModal === 'login' || activeModal === 'register'}
         onClose={closeModal}

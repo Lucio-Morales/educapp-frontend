@@ -1,11 +1,17 @@
 import { createGlobalStyle } from 'styled-components';
 
 const GlobalStyles = createGlobalStyle`
-    *,*::before, *::after {
+    * {
         box-sizing: border-box;
         margin:0;
         padding:0;
     }
+
+     html, body {
+    overflow-x: hidden; /* Evita el desbordamiento horizontal */
+    margin: 0;
+    padding: 0;
+  }
 
     body {
         font-family: 'Arial', sans-serif;

@@ -4,17 +4,20 @@ import styled from 'styled-components';
 
 const NavbarContainer = styled.nav`
   display: flex;
-  justify-content: flex-end; // Alinea los elementos a la derecha
-  padding: 20px 30px; // Espaciado alrededor de la barra
-  background-color: #f8f8f8; // Color de fondo
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); // Sombra para darle profundidad
+  justify-content: flex-end;
+  padding: 20px 30px;
+  background-color: #f8f8f8;
+  position: fixed; /* Fija la barra de navegación */
+  top: 0; /* Coloca la barra en la parte superior */
+  left: 0; /* Alinea al lado izquierdo */
+  right: 0; /* Alinea al lado derecho */
+  z-index: 1000; /* Asegura que esté por encima de otros elementos */
 `;
 
 const NavbarButton = styled.button<{ variant?: 'login' | 'register' }>`
-  margin-left: 18px; // Espacio entre botones
-  padding: 12px 24px; // Espaciado dentro del botón
+  margin-left: 18px;
+  padding: 12px 24px;
   border: 2px solid black;
-  //   border-radius: 5px;
   color: black;
   font-size: 16px;
   font-weight: bold;
@@ -25,19 +28,15 @@ const NavbarButton = styled.button<{ variant?: 'login' | 'register' }>`
   ${({ variant }) =>
     variant === 'login'
       ? `
-      background-color:#f8f8f8 #4a90e2; // Color de fondo del botón Login
-      
-
+      background-color: #f8f8f8; /* Corrige el valor de color de fondo */
       &:hover {
-        background-color:#e0e0e0 ; // Color de fondo en hover para Login
+        background-color: #e0e0e0; 
       }
     `
       : `
-      background-color:#A4C8E1; // Color de fondo del botón Register
-      
-
+      background-color: #A4C8E1; 
       &:hover {
-        background-color: #7DA3C7; // Color de fondo en hover para Register
+        background-color: #7DA3C7; 
       }
     `}
 `;
