@@ -23,15 +23,15 @@ const StyledButton = styled.button`
   padding: 12px;
   font-size: 16px;
   font-weight: bold;
-  color: #fff;
-  background-color: #007bff;
-  border: none;
-  border-radius: 4px;
+  color: black;
+  background-color: #a4c8e1;
+  border: 2px solid black;
+  // border-radius: 4px;
   cursor: pointer;
   transition: background-color 0.3s ease;
 
   &:hover {
-    background-color: #0056b3;
+    background-color: #7da3c7;
   }
 `;
 

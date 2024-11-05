@@ -88,7 +88,7 @@ export const FormContainer = styled.form`
   gap: 16px;
   padding: 24px;
   background-color: #f9f9f9;
-  border-radius: 8px;
+  // border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   width: 100%;
   max-width: 400px;

@@ -1,36 +1,3 @@
-// interface FormInputProps {
-//   label: string;
-//   name: string;
-//   type?: string;
-//   value: string;
-//   onChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
-//   error?: string;
-// }
-
-// const FormInput: React.FC<FormInputProps> = ({
-//   label,
-//   name,
-//   type = 'text',
-//   value,
-//   onChange,
-//   error,
-// }) => (
-//   <div>
-//     <label htmlFor={name}>{label}</label>
-//     <input
-//       id={name}
-//       name={name}
-//       type={type}
-//       value={value}
-//       onChange={onChange}
-//     />
-//     {error && <p style={{ color: 'red' }}>{error}</p>}
-//   </div>
-// );
-
-// export default FormInput;
-
-// FormInput.tsx
 import styled from 'styled-components';
 
 interface FormInputProps {
@@ -56,7 +23,7 @@ const InputField = styled.input`
   padding: 10px;
   font-size: 16px;
   border: 1px solid #ddd;
-  border-radius: 4px;
+  // border-radius: 4px;
   outline: none;
 
   &:focus {
