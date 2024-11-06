@@ -91,7 +91,7 @@ const Hero = () => {
         <p>
           Únete a una comunidad de profesionales que te ayudarán a alcanzar tus
           metas educativas. Conéctate con tutores y profesores en línea, accede
-          a recursos valiosos y mejora tus habilidades.
+          a recursos valiosos y potencia tu formación.
         </p>
         <button>Crear cuenta</button>
       </div>

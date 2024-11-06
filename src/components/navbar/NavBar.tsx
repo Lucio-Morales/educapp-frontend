@@ -50,10 +50,10 @@ const Navbar: React.FC<NavbarProps> = ({ onLoginClick, onRegisterClick }) => {
   return (
     <NavbarContainer>
       <NavbarButton variant="login" onClick={onLoginClick}>
-        Login
+        Ingresar
       </NavbarButton>
       <NavbarButton variant="register" onClick={onRegisterClick}>
-        Register
+        Crear cuenta
       </NavbarButton>
     </NavbarContainer>
   );

@@ -35,5 +35,5 @@ export const useForm = <T extends FormState>(
       }
     };
 
-  return { formData, handleChange, handleSubmit, formErrors };
+  return { formData, setFormData, handleChange, handleSubmit, formErrors };
 };

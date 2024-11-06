@@ -1,20 +1,43 @@
+import { useMutation } from '@tanstack/react-query';
 import { FormState, useForm } from '../../hooks/useForm';
 import FormButton from './FormButton';
 import FormInput from './FormInput';
-import { FormContainer } from './Register';
+import { FormContainer } from './styles';
 import { validateLogin } from './validation';
+import { loginUser } from '../../api/api';
 
-interface LoginFormValues extends FormState {
+export interface LoginFormValues extends FormState {
   email: string;
   password: string;
 }
 
+const initialState: LoginFormValues = {
+  email: '',
+  password: '',
+};
 const Login = () => {
-  const { formData, handleChange, handleSubmit, formErrors } =
+  //Hook useMutation config
+  const mutation = useMutation({
+    mutationFn: loginUser,
+    onSuccess: () => {
+      console.log('User login successfully.');
+      alert('Usuario logueado con exito :)');
+      setFormData(initialState);
+    },
+    onError: (error) => {
+      console.error('Error logueando el user.', error);
+      alert('Error al loguear usuario :(');
+    },
+  });
+
+  //Hook useForm
+  const { formData, setFormData, handleChange, handleSubmit, formErrors } =
     useForm<LoginFormValues>({ email: '', password: '' }, validateLogin);
 
+  //Funcion onSubmit
   const onSubmit = () => {
-    console.log('Datos de login:', formData);
+    // console.log('Datos de login:', formData);
+    mutation.mutate(formData);
   };
 
   return (
@@ -34,7 +57,7 @@ const Login = () => {
         onChange={handleChange}
         error={formErrors.password}
       />
-      <FormButton label="Iniciar sesión" />
+      <FormButton isPending={mutation.isPending} label="Iniciar sesión" />
     </FormContainer>
   );
 };

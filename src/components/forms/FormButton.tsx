@@ -1,22 +1,9 @@
-// interface FormButtonProps {
-//   label: string;
-//   onClick?: () => void;
-// }
-
-// const FormButton: React.FC<FormButtonProps> = ({ label, onClick }) => (
-//   <button type="submit" onClick={onClick}>
-//     {label}
-//   </button>
-// );
-
-// export default FormButton;
-
-// FormButton.tsx
 import styled from 'styled-components';
 
 interface FormButtonProps {
   label: string;
   onClick?: () => void;
+  isPending?: boolean;
 }
 
 const StyledButton = styled.button`
@@ -35,9 +22,13 @@ const StyledButton = styled.button`
   }
 `;
 
-const FormButton: React.FC<FormButtonProps> = ({ label, onClick }) => (
-  <StyledButton type="submit" onClick={onClick}>
-    {label}
+const FormButton: React.FC<FormButtonProps> = ({
+  label,
+  onClick,
+  isPending,
+}) => (
+  <StyledButton type="submit" disabled={isPending} onClick={onClick}>
+    {isPending ? 'Loading...' : label}
   </StyledButton>
 );
 
