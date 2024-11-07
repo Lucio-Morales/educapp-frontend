@@ -2,9 +2,24 @@ import { useMutation } from '@tanstack/react-query';
 import { FormState, useForm } from '../../hooks/useForm';
 import FormButton from './FormButton';
 import FormInput from './FormInput';
-import { FormContainer } from './styles';
+// import { FormContainer } from './styles';
 import { validateLogin } from './validation';
 import { loginUser } from '../../api/api';
+import styled from 'styled-components';
+
+const LoginContainer = styled.form`
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+  padding: 24px;
+  background-color: #f9f9f9;
+  // min-height: 430px;
+  height: 320px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+`;
 
 export interface LoginFormValues extends FormState {
   email: string;
@@ -41,7 +56,7 @@ const Login = () => {
   };
 
   return (
-    <FormContainer onSubmit={handleSubmit(onSubmit)}>
+    <LoginContainer onSubmit={handleSubmit(onSubmit)}>
       <FormInput
         label="Correo"
         name="email"
@@ -58,7 +73,7 @@ const Login = () => {
         error={formErrors.password}
       />
       <FormButton isPending={mutation.isPending} label="Iniciar sesión" />
-    </FormContainer>
+    </LoginContainer>
   );
 };
 

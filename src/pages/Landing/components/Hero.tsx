@@ -1,6 +1,10 @@
 import styled from 'styled-components';
 import image_demo from '../../../assets/image-demo.jpg'; // Asegúrate de que esta ruta sea correcta
 
+interface HeroProps {
+  onRegisterClick: () => void;
+}
+
 const HeroSection = styled.div`
   display: flex;
   align-items: center;
@@ -83,7 +87,7 @@ const HeroSection = styled.div`
   }
 `;
 
-const Hero = () => {
+const Hero: React.FC<HeroProps> = ({ onRegisterClick }) => {
   return (
     <HeroSection>
       <div className="hero-text">
@@ -93,7 +97,7 @@ const Hero = () => {
           metas educativas. Conéctate con tutores y profesores en línea, accede
           a recursos valiosos y potencia tu formación.
         </p>
-        <button>Crear cuenta</button>
+        <button onClick={onRegisterClick}>Crear cuenta</button>
       </div>
       <div className="hero-img">
         <img src={image_demo} alt="Educapp" />

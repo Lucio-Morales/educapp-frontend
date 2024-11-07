@@ -1,5 +1,9 @@
 import styled from 'styled-components';
 
+interface CtaProps {
+  onRegisterClick: () => void;
+}
+
 const CtaSection = styled.div`
   padding: 40px 20px;
   background-color: #a4c8e1;
@@ -29,11 +33,11 @@ const CtaSection = styled.div`
   }
 `;
 
-const Cta = () => {
+const Cta: React.FC<CtaProps> = ({ onRegisterClick }) => {
   return (
     <CtaSection>
       <h2>¡Empieza hoy mismo!</h2>
-      <button>Crear cuenta</button>
+      <button onClick={onRegisterClick}>Crear cuenta</button>
     </CtaSection>
   );
 };

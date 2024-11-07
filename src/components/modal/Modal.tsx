@@ -42,34 +42,34 @@ const ModalContainer = styled.div`
   animation: ${slideIn} 0.5s ease-out;
 `;
 
-const CloseButton = styled.button`
-  position: absolute;
-  top: 15px;
-  right: 15px;
-  width: 32px;
-  height: 32px;
-  background-color: #fdecea;
-  border: none;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 18px;
-  color: #c0392b;
-  cursor: pointer;
-  transition: background-color 0.3s, color 0.3s, transform 0.2s;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+// const CloseButton = styled.button`
+//   position: absolute;
+//   top: 15px;
+//   right: 15px;
+//   width: 32px;
+//   height: 32px;
+//   background-color: #fdecea;
+//   border: none;
+//   border-radius: 50%;
+//   display: flex;
+//   align-items: center;
+//   justify-content: center;
+//   font-size: 18px;
+//   color: #c0392b;
+//   cursor: pointer;
+//   transition: background-color 0.3s, color 0.3s, transform 0.2s;
+//   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 
-  &:hover {
-    background-color: #f8d7da;
-    color: #922b21;
-    transform: scale(1.1);
-  }
+//   &:hover {
+//     background-color: #f8d7da;
+//     color: #922b21;
+//     transform: scale(1.1);
+//   }
 
-  &:focus {
-    outline: none;
-  }
-`;
+//   &:focus {
+//     outline: none;
+//   }
+// `;
 
 const Container = styled.div`
   display: flex;
@@ -83,7 +83,7 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose, children }) => {
   return (
     <Overlay onClick={onClose}>
       <ModalContainer onClick={(event) => event.stopPropagation()}>
-        <CloseButton onClick={onClose}>X</CloseButton>
+        {/* <CloseButton onClick={onClose}>X</CloseButton> */}
         <Container>{children}</Container>
       </ModalContainer>
     </Overlay>
