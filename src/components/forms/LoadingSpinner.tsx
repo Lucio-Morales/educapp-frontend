@@ -1,9 +1,12 @@
-// LoadingSpinner.tsx
 import styled from 'styled-components';
 
 const SpinnerContainer = styled.div`
   display: flex;
+  position: absolute;
+  top: 50%;
+  left: 50%;
   align-items: center;
+  transform: translate(-50%, -50%);
   justify-content: center;
   width: 100%;
   height: 100%;

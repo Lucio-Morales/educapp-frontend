@@ -3,15 +3,21 @@ import styled from 'styled-components';
 const FormContainer = styled.form`
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 12px;
   padding: 24px;
   background-color: #f9f9f9;
   min-height: 430px;
-  height: 440px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
   width: 100%;
   max-width: 400px;
   margin: 0 auto;
+  position: relative;
+
+  h3 {
+    font-size: 18px;
+    font-weight: 300;
+    text-align: center;
+  }
 `;
 
 const SelectContainer = styled.div`

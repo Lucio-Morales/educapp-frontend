@@ -42,7 +42,7 @@ const Landing = () => {
         isOpen={activeModal === 'login' || activeModal === 'register'}
         onClose={closeModal}
       >
-        {isRegister ? <Register /> : <Login />}
+        {isRegister ? <Register onClick={toggleForm} /> : <Login />}
         <ToggleText onClick={toggleForm}>
           {isRegister
             ? '¿Ya tienes una cuenta? Ingresar'

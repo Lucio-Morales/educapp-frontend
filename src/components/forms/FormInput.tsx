@@ -16,11 +16,11 @@ const InputContainer = styled.div`
 
 const InputLabel = styled.label`
   font-size: 14px;
-  margin-bottom: 4px;
+  margin-bottom: 2px;
 `;
 
 const InputField = styled.input`
-  padding: 10px;
+  padding: 8px;
   font-size: 16px;
   border: 1px solid #ddd;
   // border-radius: 4px;
