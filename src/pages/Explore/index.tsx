@@ -1,9 +1,9 @@
 import { Outlet } from 'react-router-dom';
-import { Content, MainPane, SecondaryPane } from '../styles/Page';
 import Nav from '../../components/page/Nav';
-import { navItems } from '../../lib/data/pages/dashboard';
+import { Content, MainPane, SecondaryPane } from '../styles/Page';
+import { navItems } from '../../lib/data/pages/explore';
 
-const DashboardPage = () => {
+const ExplorePage = () => {
   return (
     <>
       <MainPane>
@@ -17,4 +17,4 @@ const DashboardPage = () => {
   );
 };
 
-export default DashboardPage;
+export default ExplorePage;
