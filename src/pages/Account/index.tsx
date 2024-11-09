@@ -1,13 +1,12 @@
 import { Outlet } from 'react-router-dom';
-import { navItems } from '../../lib/data/pages/account';
+// import { navItems } from '../../lib/data/pages/account';
 import { Content, MainPane, SecondaryPane } from '../styles/Page';
-import Nav from '../../components/page/Nav';
+// import Nav from '../../components/page/Nav';
 
 const AccountPage = () => {
   return (
     <>
       <MainPane>
-        <Nav items={navItems} />
         <Content>
           <Outlet />
         </Content>

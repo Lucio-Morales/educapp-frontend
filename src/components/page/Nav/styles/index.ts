@@ -46,17 +46,15 @@ const PageNavItem = styled.div`
   ${({ active }) =>
     active &&
     css`
-      // border-bottom: 2px solid ${({ theme }) => theme.primaryColor};
-      border-bottom: 3px solid #555;
-      color: black;
+      border-bottom: 2px solid ${({ theme }) => theme.primaryColor};
+      color: white;
     `}
   ${({ active }) =>
     !active &&
     css`
       @media (hover: hover) {
         &:hover {
-          // background: ${({ theme }) => theme.backgroundGrey};
-          background: #555;
+          background: ${({ theme }) => theme.backgroundGrey};
         }
       }
     `}
