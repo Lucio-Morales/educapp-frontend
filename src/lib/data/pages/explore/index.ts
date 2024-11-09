@@ -14,16 +14,16 @@ const navItems: PageNavigationItemDto[] = [
     path: '/explore/find-groups',
   },
   {
-    title: 'Popular',
-    key: 'popular',
-    path: '/explore/popular',
+    title: 'Featured',
+    key: 'featured',
+    path: '/explore/featured',
   },
 ];
 
 const exploreSectionMap = {
   findPeople: 'findPeople',
   findGroups: 'findGroups',
-  popular: 'popular',
+  featured: 'featured',
 };
 
 export { navItems, exploreSectionMap };

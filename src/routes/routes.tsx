@@ -7,14 +7,17 @@ import NotificationsPage from '../pages/Notifications';
 import AccountPage from '../pages/Account';
 import Public from '../pages/Dashboard/pages/Public';
 import News from '../pages/Dashboard/pages/News';
-import Groups from '../pages/Dashboard/pages/Groups';
+
 import FindGroups from '../pages/Explore/pages/FindGroups';
 import FindPeople from '../pages/Explore/pages/FindPeople';
-import Popular from '../pages/Explore/pages/Popular';
+
 import General from '../pages/Notifications/pages/General';
 import Messages from '../pages/Notifications/pages/Messages';
 import Profile from '../pages/Account/pages/Profile';
 import Settings from '../pages/Account/pages/Settings';
+import YourGroups from '../pages/Notifications/pages/YourGroups';
+import Popular from '../pages/Dashboard/pages/Popular';
+import Featured from '../pages/Explore/pages/Featured';
 
 const routes = createBrowserRouter([
   {
@@ -29,7 +32,7 @@ const routes = createBrowserRouter([
           { path: '', element: <Public />, index: true },
           { path: 'public', element: <Public /> },
           { path: 'news', element: <News /> },
-          { path: 'groups', element: <Groups /> },
+          { path: 'popular', element: <Popular /> },
         ],
       },
       {
@@ -39,7 +42,7 @@ const routes = createBrowserRouter([
           { path: '', element: <FindPeople />, index: true },
           { path: 'find-people', element: <FindPeople /> },
           { path: 'find-groups', element: <FindGroups /> },
-          { path: 'popular', element: <Popular /> },
+          { path: 'featured', element: <Featured /> },
         ],
       },
       {
@@ -49,6 +52,7 @@ const routes = createBrowserRouter([
           { path: '', element: <General />, index: true },
           { path: 'general', element: <General /> },
           { path: 'messages', element: <Messages /> },
+          { path: 'your-groups', element: <YourGroups /> },
         ],
       },
       {

@@ -14,16 +14,16 @@ const navItems: PageNavigationItemDto[] = [
     path: '/dashboard/news',
   },
   {
-    title: 'Groups',
-    key: 'groups',
-    path: '/dashboard/groups',
+    title: 'Popular',
+    key: 'popular',
+    path: '/dashboard/popular',
   },
 ];
 
 const dashboardSectionMap = {
   public: 'public',
   news: 'news',
-  groups: 'groups',
+  popular: 'popular',
 };
 
 export { navItems, dashboardSectionMap };
